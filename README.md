@@ -31,4 +31,9 @@ Docker commands
                       -> docker network ls
                       -> docker inspect name_of_container
                       -> docker network inspect devopswithdocker_default (name of the custom network)
-17. docker compose scale -> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2
+17. docker compose build  -> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build -V
+18. docker compose scale -> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2
+19. docker compose build for specific app -> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build --no-deps node-app
+20. docker compose force recreate container -> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build --force-recreate --no-deps node-app
+21. Rename the docker image --> docker image tag node-app smishra04/node-app   
+22. Push the image to docker hub --> docker push smishra04/node-app:latest 
