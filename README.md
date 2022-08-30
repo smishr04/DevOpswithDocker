@@ -19,3 +19,16 @@ Docker commands
                   -> docker-compose down -v (-v deletes all unnecessary volume that it creates )
                   -> docker-compse up -d --build (--build will rebuild the image)
                   -> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d
+9.  sConnect to mondo db container -> docker exec -it devopswithdocker_mongo_1  mongosh -u 'sanjeev' -p 'mypassword'
+10. list docker voumes -> docker volume ls 
+11. delete unused local volumes -> docker volume prune
+11. Create new mondodb -> use mydb
+12. list dbs ->  show dbs
+13. create a record in mondo db - > db.books.insert({'name':'harry porter'})
+14. find the record -> db.books.find()
+15. use monogodb for the express app -> npm install mongoose
+16. docker networking -> bridge and host are default network
+                      -> docker network ls
+                      -> docker inspect name_of_container
+                      -> docker network inspect devopswithdocker_default (name of the custom network)
+17. docker compose scale -> docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2

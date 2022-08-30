@@ -5,10 +5,9 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./:/app:ro #"D:\\Docker\\Node-Docker\\:/app:ro"
+      - ./:/app
       - /app/node_modules
     environment:
       - PORT=3000
     # env_file:
     #   - ./.env
-    
