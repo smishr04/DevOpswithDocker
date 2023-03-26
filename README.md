@@ -14,7 +14,8 @@ Docker commands
    anaonymous vloume -> docker run -v %cd%:/app *-v /app/nodemodules* -d -p 3000:3000 --name node-app node-app-image
 4. Exec to container -> docker exec -it node-app bash
 5. list  containers -> docker ps -a
-6. delete container -> docker rm node-app -f
+6. delete container -> docker rm node-app -f 
+   delete container + anonymus volume  -> docker rm node-app -fv
 7. delete image -> docker rmi node-app-image 
 8. docker compose -> docker-compose up -d 
                   -> docker-compose down -v (-v deletes all unnecessary volume that it creates )
