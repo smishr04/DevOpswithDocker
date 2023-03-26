@@ -11,6 +11,7 @@ Docker commands
 1. build image-> docker build -t node-app-image . 
 2. list image -> docker images
 3. run container with bind mount and env file -> docker run -v D:\Docker\Node-Docker\:/app:ro --env-file ./.env -p 4000:4000 -d --name node-app node-app-image
+   anaonymous vloume -> docker run -v %cd%:/app *-v /app/nodemodules* -d -p 3000:3000 --name node-app node-app-image
 4. Exec to container -> docker exec -it node-app bash
 5. list  containers -> docker ps -a
 6. delete container -> docker rm node-app -f
